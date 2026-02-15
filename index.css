@@ -112,8 +112,40 @@ nav {
     height: 80px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background: var(--glass-bg);
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition);
+    gap: 12px;
+}
+
+.logo:hover {
+    background: rgba(100, 255, 218, 0.08);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.1);
+}
+
 .logo img {
-    height: 40px;
+    height: 32px;
+    filter: drop-shadow(0 0 8px rgba(100, 255, 218, 0.2));
+}
+
+.logo::after {
+    content: "LOGIC AGENT";
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.logo:hover::after {
+    color: var(--accent-color);
 }
 
 .nav-links {
