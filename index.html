@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <div id="mouse-trailer"></div>
+    <canvas id="bg-canvas"></canvas>
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
+    </div>
     <header>
         <div class="container">
             <nav>
@@ -19,6 +26,7 @@
                 </a>
                 <ul class="nav-links">
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -30,55 +38,136 @@
             <div class="container">
                 <div class="hero-content" data-reveal>
                     <h1>Logic Agent</h1>
-                    <p>Building the future of intelligent systems through expert data science, robust backends, and elegant web solutions.</p>
-                    <a href="#contact" class="cta-button">Get in Touch</a>
+                    <p class="hero-subline" id="typewriter-text"
+                        data-text="Building production-grade AI systems using LLMs, agents, and scalable cloud architecture.">
+                        Building production-grade AI systems using LLMs, agents, and scalable cloud architecture.
+                    </p>
+                    <div class="authority-bar">
+                        <div class="signal">
+                            <span class="signal-icon">🕒</span>
+                            <span class="signal-text">6+ Years Experience</span>
+                        </div>
+                        <div class="signal">
+                            <span class="signal-icon">🌍</span>
+                            <span class="signal-text">Built AI Systems in USA & India</span>
+                        </div>
+                        <div class="signal">
+                            <span class="signal-icon">🚀</span>
+                            <span class="signal-text">30+ Projects Delivered</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-button">Book a Consult</a>
                 </div>
             </div>
         </section>
 
         <section id="services" class="services">
             <div class="container">
-                <h2 data-reveal>Our Services</h2>
+                <h2 data-reveal>Expertise & Services</h2>
                 <div class="services-grid">
-                    <div class="service-card" data-reveal>
-                        <h3>Data Science</h3>
-                        <p>Advanced data analysis and predictive modeling to drive business decisions.</p>
+                    <!-- AI Agents & GenAI -->
+                    <div class="service-category" data-reveal>
+                        <div class="category-header">
+                            <span class="cat-icon">🤖</span>
+                            <h3>AI Agents & Production GenAI Systems</h3>
+                        </div>
+                        <ul class="service-list">
+                            <li>Multi-agent workflows (LangGraph-based)</li>
+                            <li>Retrieval-Augmented Generation (RAG) pipelines</li>
+                            <li>Vector DB integration (Pinecone / FAISS / Weaviate)</li>
+                            <li>End-to-end LLM system design</li>
+                            <li>Evaluation & Guardrails (Prompt eval, hallucination control)</li>
+                            <li>Token optimization & cost control</li>
+                            <li>LLM orchestration & tool usage</li>
+                            <li>Autonomous workflow automation</li>
+                            <li>Enterprise knowledge search systems</li>
+                            <li>LLM observability & monitoring</li>
+                        </ul>
                     </div>
-                    <div class="service-card" data-reveal>
-                        <h3>Web App Development</h3>
-                        <p>Modern, responsive, and high-performance web applications built with the latest frameworks.</p>
+
+                    <!-- Cloud-Native AI Product Engineering -->
+                    <div class="service-category" data-reveal>
+                        <div class="category-header">
+                            <span class="cat-icon">☁️</span>
+                            <h3>Cloud-Native AI Product Engineering</h3>
+                        </div>
+                        <ul class="service-list">
+                            <li>Scalable backend systems (FastAPI, Node, Django)</li>
+                            <li>Microservices & API design</li>
+                            <li>Docker & Kubernetes</li>
+                            <li>CI/CD (Azure DevOps, GitHub Actions)</li>
+                            <li>Cloud deployment (AWS, Azure, GCP)</li>
+                            <li>Infrastructure as Code (Terraform)</li>
+                            <li>Web development, app development</li>
+                        </ul>
                     </div>
-                    <div class="service-card" data-reveal>
-                        <h3>Backend (Python)</h3>
-                        <p>Scalable and secure backend architectures using Python and modern APIs.</p>
+
+                    <!-- Data Intelligence & AI Research -->
+                    <div class="service-category" data-reveal>
+                        <div class="category-header">
+                            <span class="cat-icon">📊</span>
+                            <h3>Data Intelligence & AI Research</h3>
+                        </div>
+                        <ul class="service-list">
+                            <li>EDA & advanced analytics</li>
+                            <li>Predictive modeling</li>
+                            <li>NLP pipelines</li>
+                            <li>Data engineering workflows</li>
+                            <li>A/B testing & experimentation</li>
+                            <li>AI research & benchmarking</li>
+                        </ul>
                     </div>
-                    <div class="service-card" data-reveal>
-                        <h3>Java Services</h3>
-                        <p>Enterprise-grade Java application development and system integration.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="clients-section">
+            <div class="container">
+                <div class="clients-layout">
+                    <div class="clients-text" data-reveal>
+                        <h2>Who I Work With</h2>
+                        <ul class="client-list">
+                            <li><strong>Startups</strong> building AI products</li>
+                            <li><strong>Enterprises</strong> modernizing with LLMs</li>
+                            <li><strong>Founders</strong> validating AI MVPs</li>
+                            <li><strong>CTOs</strong> needing AI architecture</li>
+                        </ul>
                     </div>
-                    <div class="service-card" data-reveal>
-                        <h3>Research Analysis</h3>
-                        <p>Deep technical research and quantitative analysis for complex problems.</p>
+                    <div class="cta-box" data-reveal>
+                        <h3>Ready to build your AI-powered product?</h3>
+                        <a href="#contact" class="cta-button">Let's build together</a>
                     </div>
-                    <div class="service-card" data-reveal>
-                        <h3>Statistical Analysis</h3>
-                        <p>Rigorous statistical modeling and data interpretation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 data-reveal>Selected AI Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-reveal>
+                        <div class="project-header">
+                            <span class="project-tag">Case Study</span>
+                            <h3>Enterprise Knowledge RAG System</h3>
+                        </div>
+                        <ul class="project-details">
+                            <li>Built RAG over <strong>200K+ documents</strong></li>
+                            <li>Reduced support ticket resolution time by <strong>40%</strong></li>
+                            <li>Integrated with Slack + web UI</li>
+                            <li>Hosted on AWS with autoscaling</li>
+                        </ul>
                     </div>
-                    <div class="service-card" data-reveal>
-                        <h3>Stock Market Analysis</h3>
-                        <p>Quantitative finance models and market data visualization.</p>
-                    </div>
-                    <div class="service-card" data-reveal>
-                        <h3>Content Writing</h3>
-                        <p>High-quality technical documentation and professional content.</p>
-                    </div>
-                    <div class="service-card" data-reveal>
-                        <h3>Data Entry</h3>
-                        <p>Accurate and efficient data management and processing.</p>
-                    </div>
-                    <div class="service-card" data-reveal>
-                        <h3>Application Development</h3>
-                        <p>End-to-end software development from concept to deployment.</p>
+                    <div class="project-card" data-reveal>
+                        <div class="project-header">
+                            <span class="project-tag">Case Study</span>
+                            <h3>Multi-Agent Research Assistant</h3>
+                        </div>
+                        <ul class="project-details">
+                            <li>LangGraph orchestration</li>
+                            <li>Web search + summarization agents</li>
+                            <li>Tool-calling LLMs</li>
+                            <li>Deployed via Azure Kubernetes</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -87,8 +176,8 @@
         <section id="contact" class="contact">
             <div class="container">
                 <div class="contact-container">
-                    <h2 data-reveal>Ready to Build Something Amazing?</h2>
-                    <p data-reveal>Reach out to discuss your project requirements and how Logic Agent can help.</p>
+                    <h2 data-reveal>Book a Consult</h2>
+                    <p data-reveal>Let's build your AI-powered product together.</p>
                     <div class="contact-info">
                         <div class="contact-item" data-reveal>
                             <a href="mailto:contactus@logicagent.co">contactus@logicagent.co</a>
@@ -112,4 +201,5 @@
 
     <script src="index.js"></script>
 </body>
+
 </html>
